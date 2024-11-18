@@ -23,7 +23,9 @@ body {
 
 .cartao {
     margin: 1rem 1rem;
-    width: calc(33% - 2rem); /* Manter a posição em 3 colunas */
+    height: 20rem; /* Manter altura original */
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem); /* Manter largura original */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
