@@ -1,13 +1,13 @@
 :root {
-    --text-color: #E1E1E1;  /* Texto claro */
-    --card-front-color: #1E2A47; /* Azul profundo para o cartão */
-    --card-back-color: #3B4C78; /* Azul mais suave para o verso */
-    --border-color: #5A6C91; /* Cor sutil para as bordas */
+    --text-color: #E1E1E1;
+    --card-front-color: #1E2A47;
+    --card-back-color: #3B4C78;
+    --border-color: #5A6C91;
 }
 
 body {
-    background-color: #212D40; /* Fundo escuro */
-    font-family: 'Arial', sans-serif; /* Fonte limpa e moderna */
+    background-color: #212D40;
+    font-family: 'Arial', sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -16,22 +16,22 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 3rem;
-    gap: 2rem;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 3rem;
 }
 
 .cartao {
-    margin: 1rem;
-    width: 18rem;
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Para não vazar conteúdo */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 1rem 1rem;
+    width: calc(33% - 2rem); /* Manter a posição em 3 colunas */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .cartao:hover {
-    transform: scale(1.05); /* Efeito de zoom suave */
+    transform: scale(1.05);
 }
 
 .cartao__conteudo {
@@ -39,8 +39,7 @@ body {
     padding: 1.5rem;
     text-align: center;
     border-radius: 8px;
-    /* Remover a rotação */
-    /* Não aplicamos mais rotação ou efeito 3D aqui */
+    transition: transform 300ms ease-in-out;
     position: relative;
 }
 
@@ -50,6 +49,7 @@ body {
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    backface-visibility: hidden;
 }
 
 .cartao__conteudo p {
@@ -68,7 +68,14 @@ body {
     font-weight: 700;
 }
 
-/* Remover a rotação do cartão */
+.cartao.active .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao.active .cartao__conteudo h3 {
+    visibility: hidden; /* Esconde o título quando o card virar */
+}
+
 .cartao__conteudo__pergunta,
 .cartao__conteudo__resposta {
     backface-visibility: hidden;
@@ -79,12 +86,13 @@ body {
 }
 
 .cartao__conteudo__resposta {
+    transform: rotateY(180deg);
     background-color: rgba(59, 76, 120, 0.2);
     border: 4px solid var(--card-back-color);
 }
 
 footer {
-    background-color: #1E2A47; /* Cor mais escura para o rodapé */
+    background-color: #1E2A47;
     color: var(--text-color);
     position: fixed;
     bottom: 0;
