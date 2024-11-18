@@ -7,7 +7,7 @@ criaCartao(
 criaCartao(
     'Ursos de força',
     'Já pensou em fazer supino reto com 300KG?',
-    'O powerlifter russo, Andrey Smaev, conhecido por sua força e tamnho de urso, conseguiu realizar 3 repetições com esse peso, uma marca impressionante no mundo do levantamento de peso. Esse feito coloca Smaev entre os atletas de elite no supino, sendo um exemplo de força brutal no esporte.'
+    'O russo, Andrey Smaev, conhecido por sua força e tamanho de urso, conseguiu realizar 3 repetições com esse peso, uma marca impressionante no powerlifting. Esse feito coloca Smaev entre os atletas de elite no supino, sendo um exemplo de força brutal no esporte.'
 )
 
 criaCartao(
