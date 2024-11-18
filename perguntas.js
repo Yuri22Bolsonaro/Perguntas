@@ -7,7 +7,7 @@ criaCartao(
 criaCartao(
     'Ursos de força',
     'Já pensou em fazer supino reto com 300KG?',
-    'O Andrey Smaev, fez 3 reps'
+    'O powerlifter russo, Andrey Smaev, conhecido por sua força e tamnho de urso, conseguiu realizar 3 repetições com esse peso, uma marca impressionante no mundo do levantamento de peso. Esse feito coloca Smaev entre os atletas de elite no supino, sendo um exemplo de força brutal no esporte.'
 )
 
 criaCartao(
@@ -19,5 +19,5 @@ criaCartao(
 criaCartao(
     'Superação',
     'Qual o homem que teve a maior superação de vida?',
-    'DAVID GOGGINS !!! É um ex-Navy SEAL, ultramaratonista e autor famoso por sua filosofia de superação mental e resistência extrema. Ele enfrentou uma infância difícil, mas se tornou um exemplo de resiliência ao alcançar conquistas físicas e psicológicas extraordinárias. Seu livro Cant Hurt Me e suas palestras motivacionais inspiram muitos a desafiar seus próprios limites.'
+    'DAVID GOGGINS !!! É um ex-Navy SEAL, ultramaratonista e autor famoso por sua filosofia de superação mental e resistência extrema. Ele enfrentou uma infância difícil, mas se tornou um exemplo de resiliência ao alcançar conquistas físicas e psicológicas extraordinárias. Seu livro Cant Hurt Me e suas palestras motivacionais inspiram muitos a desafiar seus próprios limites. ~"They dont know me son" Stay hard!'
 )
