@@ -19,6 +19,7 @@ body {
     justify-content: space-between;
     padding: 4rem;
     gap: 3rem;
+    perspective: 1000px;
 }
 
 .cartao {
@@ -88,10 +89,9 @@ body {
 }
 
 .cartao__conteudo__resposta {
-    transform: rotateY(180deg);
-    background-color: rgba(59, 76, 120, 0.2);
-    border: 4px solid var(--card-back-color);
+    transform: rotateY(180deg); /* Faz com que o texto fique na orientação correta */
 }
+
 
 footer {
     background-color: #1E2A47;
