@@ -6,11 +6,25 @@
 }
 
 body {
-    background-color: #212D40;
+    background: linear-gradient(45deg, #041234, #073a7c);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
     font-family: 'Arial', sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #container {
@@ -44,6 +58,7 @@ body {
     border-radius: 8px;
     transition: transform 300ms ease-in-out;
     position: relative;
+    transform-style: preserve-3d;
 }
 
 .cartao__conteudo h3 {
@@ -64,12 +79,17 @@ body {
 .cartao__conteudo__pergunta p {
     color: var(--text-color);
     font-weight: 500;
+    text-align: center;
+    padding: 2rem; /* Adiciona o padding para afastar o texto da borda */
 }
 
 .cartao__conteudo__resposta p {
-    color: var(--card-back-color);
+    color: white;
     font-weight: 700;
+    text-align: center;
+    padding: 2rem; /* Adiciona o padding para afastar o texto da borda */
 }
+
 
 .cartao.active .cartao__conteudo {
     transform: rotateY(180deg);
@@ -81,17 +101,25 @@ body {
 
 .cartao__conteudo__pergunta,
 .cartao__conteudo__resposta {
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* Garante que o outro lado não fique visível */
     position: absolute;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao__conteudo__pergunta {
+    transform: rotateY(0deg); /* Frente não precisa de rotação */
 }
 
 .cartao__conteudo__resposta {
-    transform: rotateY(180deg); /* Faz com que o texto fique na orientação correta */
+    transform: rotateY(180deg); /* Alinha corretamente a resposta */
+    background-color: transparent; /* Remove o retângulo azul */
+    border: none; /* Remove a borda */
 }
-
 
 footer {
     background-color: #1E2A47;
