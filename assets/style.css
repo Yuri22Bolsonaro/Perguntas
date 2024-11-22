@@ -38,9 +38,9 @@ body {
 
 .cartao {
     margin: 1rem 1rem;
-    height: 20rem; /* Manter altura original */
+    height: 20rem;
     flex-grow: 1;
-    flex-basis: calc(33% - 6rem); /* Manter largura original */
+    flex-basis: calc(33% - 6rem);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -80,14 +80,14 @@ body {
     color: var(--text-color);
     font-weight: 500;
     text-align: center;
-    padding: 2rem; /* Adiciona o padding para afastar o texto da borda */
+    padding: 2rem;
 }
 
 .cartao__conteudo__resposta p {
     color: white;
     font-weight: 700;
     text-align: center;
-    padding: 2rem; /* Adiciona o padding para afastar o texto da borda */
+    padding: 2rem; 
 }
 
 
@@ -96,12 +96,12 @@ body {
 }
 
 .cartao.active .cartao__conteudo h3 {
-    visibility: hidden; /* Esconde o título quando o card virar */
+    visibility: hidden;
 }
 
 .cartao__conteudo__pergunta,
 .cartao__conteudo__resposta {
-    backface-visibility: hidden; /* Garante que o outro lado não fique visível */
+    backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -112,13 +112,13 @@ body {
 }
 
 .cartao__conteudo__pergunta {
-    transform: rotateY(0deg); /* Frente não precisa de rotação */
+    transform: rotateY(0deg); 
 }
 
 .cartao__conteudo__resposta {
-    transform: rotateY(180deg); /* Alinha corretamente a resposta */
-    background-color: transparent; /* Remove o retângulo azul */
-    border: none; /* Remove a borda */
+    transform: rotateY(180deg);
+    background-color: transparent;
+    border: none;
 }
 
 footer {
